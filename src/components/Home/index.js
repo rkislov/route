@@ -13,6 +13,13 @@ export default class Home extends Component{
         this.context.router.push(`/genre/${value}`)
     }
 
+    componentDidMount(){
+        this.context.router.setRouteLeaveHook(this.props.route, this.routerWillLeave)
+    }
+    routerWillLeave(){
+        return 'вы уверены?'
+    }
+
 
     render(){
         return(
