@@ -7,7 +7,7 @@ import Home from './components/Home'
 import NotFound from './components/NotFound'
 import List from './components/List'
 import Release from './components/Release'
-import Login from './components/Login'
+import LoginPage from './containers/LoginPage'
 
 
 
@@ -15,7 +15,7 @@ export const routes = (
     <div>
         <Route path='/' component={App}>
         <IndexRoute component={Home} />
-        <Route path='/login' component={Login} />
+        <Route path='/login' component={LoginPage} />
         <Route path='/admin' component={Admin} onEnter={Admin.onEnter}/>
         <Route path='/genre/:genre' component={Genre}>
         <Route path='/genre/:genre/:release' component={Release} />
